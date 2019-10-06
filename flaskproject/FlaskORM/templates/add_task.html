@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+    教学任务发布
+{% endblock %}
+
+{% block content %}
+{#    <循环所有>#}
+    <form method="post">
+        {% for t in task %}
+            <p>{{ t }}</p>
+        {% endfor %}
+        <input class="btn badge-danger badge-block" type="submit" value="提交">
+    </form>
+{% endblock %}
