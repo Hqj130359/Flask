@@ -438,15 +438,3 @@ class LeaveApi(Resource):
         leave.delete()
         self.result["data"] = "id 为 %s的数据删除成功"%id
         return self.result
-
-
-
-
-
-
-
-
-
-
-
-
