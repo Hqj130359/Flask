@@ -86,7 +86,7 @@ def setPassword(password):
     result = hashlib.md5(password.encode()).hexdigest()
     return result
 
-class Calendar:
+class Calendar: #课程表功能模块
     """
     当前类实现日历功能
     1、返回列表嵌套列表的日历
@@ -235,7 +235,7 @@ def exindex():
     return render_template("ex_index.html",curr_list = curr_list)
 
 @main.route("/userinfo/")
-def userinfo():
+def userinfo(): #用户中心课程表
     calendar = Calendar().return_month()
     now = datetime.datetime.now()
     return render_template("userinfo.html",**locals())
