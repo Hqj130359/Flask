@@ -355,7 +355,7 @@ def empty():
 
 
 @api.resource("/Api/leave/")
-class LeaveApi(Resource):
+class LeaveApi(Resource): #restful接口开发
     def __init__(self):
         """
         定义返回的格式
