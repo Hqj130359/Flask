@@ -1,4 +1,4 @@
-import os
+﻿import os
 import json
 import hashlib
 import datetime
@@ -261,7 +261,7 @@ def register():
 
 @main.route("/holiday_leave/",methods=["GET","POST"])
 # @csrf.exempt
-def holiday_leave():
+def holiday_leave(): #请假功能模块：  请假条
     if request.method == "POST":
         data = request.form
         request_user= data.get("request_user")
@@ -286,7 +286,7 @@ def holiday_leave():
 
 @main.route("/leave_list/<int:page>/")
 @loginValid
-def leave_list(page):
+def leave_list(page): #请假列表
     leaves = Leave.query.all()
     pager = Pager(leaves,2)
     page_data = pager.page_data(page)
